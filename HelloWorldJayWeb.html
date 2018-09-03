@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <META NAME="Author" CONTENT="ARTER">
+  <meta charset="utf-8" />
+  <title>JayHelloWorld</title>
+    <h1>Hello World</h1>
+      <h2 id="buttonshow"><h2>
+        <p>This is Jay's Website</p>
+    
+          <a href="#"><img class="smaller-image thick-green-border" src="https://cdn.yamaha-motor.eu/product_assets/2018/yzf1000r1spl/950-75/2018-yamaha-yzf-r1m-eu-silver-blu-carbon-accessorizedstudio-007.jpg" alt="A cute orange cat lying on its back."></a>
+  <hr>
+
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
+  <!-- CSS 樣式 -->
+  <style type="text/css">
+  body {
+          font-family: monospace;
+          color: purple;
+          background-color: yellow
+        }
+  h1 {
+      font-family:Lobster,monospace;   
+      color:Red;
+      }
+  p{ 
+    color:blue;
+    }
+  p1{
+    color:black;
+    }
+ .thick-green-border
+   {
+    border-color: white;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 50%;
+    }
+
+  .smaller-image {
+    width: 190px;
+    height:107px;
+  }
+ 
+  </style>
+
+</head>
+<body>
+  <!-- 網頁內文 -->
+<script language="javascript">
+
+function ShowMeDate() {
+　var Today=new Date();
+　alert("今天日期是 " + Today.getFullYear()+ " 年 " + (Today.getMonth()+1) + " 月 " + Today.getDate() + " 日");
+}
+
+function GetBirthday(){
+var date = document.getElementById('massage').value;
+  alert("您的生日是"+ date);
+}
+  function GetYearOld()
+    {
+    var YourBirth = document.getElementById('massage').value;
+    var newBirth = new Date(YourBirth).getFullYear();
+    var Today = new Date().getFullYear();
+    var years = Today - newBirth;
+
+      alert("你的年紀是"+years);
+      if (years<18){
+      alert("未成年啦！");
+      location.href = "https://yoyotv.ebc.net.tw";
+      ;
+    }
+    else{
+      alert("老屁股＝＝");
+    }
+    }
+
+</script>
+</br>
+<p1 id="pbirth">
+<!-- 輸入生日javascript -->
+<label for='massage'>請輸入生日</label>
+<input type="date" id="massage">
+
+</br>
+  <button onclick="GetBirthday(massage)&GetYearOld(massage)">確認送出</button>
+</p1>
+</body>
+</html>
